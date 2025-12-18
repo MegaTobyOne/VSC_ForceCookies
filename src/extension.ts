@@ -29,7 +29,8 @@ export function activate(context: vscode.ExtensionContext) {
 			
 			if (data && data.length > 0) {
 				const cookie = data[0];
-				vscode.window.showInformationMessage(cookie.content);
+				await vscode.env.clipboard.writeText(cookie.content);
+				vscode.window.showInformationMessage(`${cookie.content} (copied to clipboard)`);
 			} else {
 				vscode.window.showWarningMessage('No wisdom found from the Force.');
 			}

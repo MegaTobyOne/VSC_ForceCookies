@@ -1,62 +1,51 @@
 # Force Cookies
 
-Bring the wisdom of the Clone Wars era directly into your VS Code editor! Get inspired by quotes from Star Wars: The Clone Wars series.
+Clone Wars–era wisdom, on demand.
+
+Force Cookies is a lightweight VS Code extension that fetches a random quote (“wisdom”) and puts it where you need it: on screen and on your clipboard.
 
 ## Features
 
-- **Get Wisdom**: Fetch a random wisdom quote from the Clone Wars
-- **Show Wisdom**: Browse the full Force Cookies collection in VS Code's built-in browser
+- **Get Wisdom**: Fetches a random quote, shows it in a toast, and **automatically copies it to your clipboard** so you can paste it anywhere.
+- **Show Wisdom**: Opens the Force Cookies site inside VS Code.
 
-## Usage
+## Commands
 
-Open the Command Palette (`Cmd+Shift+P` on macOS, `Ctrl+Shift+P` on Windows/Linux) and search for:
+Open the Command Palette and run:
 
-- `Force Cookies: Get Wisdom` - Display a random Clone Wars quote
-- `Force Cookies: Show Wisdom` - Open the full Force Cookies website inside VS Code
+- **Force Cookies: Get Wisdom**
+    - Displays the quote
+    - Copies the quote to your clipboard (toast confirms it was copied)
+- **Force Cookies: Show Wisdom**
+    - Opens the Force Cookies website in VS Code’s built-in browser
 
 ## Requirements
 
-- VS Code 1.105.0 or higher
+- VS Code 1.105.0+
 
-## Known Issues
+## Install
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### Option A: Install the VSIX
 
-## Release Notes
+1. Download/build the `.vsix` file.
+2. In VS Code: Extensions view → `...` → **Install from VSIX…**
 
-Users appreciate release notes as you update your extension.
+Or from the command line:
 
-### 1.0.0
+```bash
+code --install-extension force-cookies-0.0.2.vsix
+```
 
-Initial release of ...
+### Option B: Install from the Marketplace
 
-### 1.0.1
+## License
 
-Fixed issue #.
+MIT — see [LICENSE](LICENSE).
 
-### 1.1.0
+## Attribution & Disclaimer
 
-Added features X, Y, and Z.
+This extension is an unofficial, fan-made project inspired by *Star Wars: The Clone Wars* and the work of Dave Filoni.
 
----
+Star Wars and related marks are trademarks of Lucasfilm Ltd. and/or its affiliates. This project is not affiliated with, endorsed by, or sponsored by Lucasfilm, Disney, Dave Filoni, or any related parties.
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Quotes/wisdom content is fetched at runtime from the Force Cookies API: https://force-cookiesv2.vercel.app/

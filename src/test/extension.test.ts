@@ -8,8 +8,16 @@ import * as vscode from 'vscode';
 suite('Extension Test Suite', () => {
 	vscode.window.showInformationMessage('Start all tests.');
 
-	test('Sample test', () => {
-		assert.strictEqual(-1, [1, 2, 3].indexOf(5));
-		assert.strictEqual(-1, [1, 2, 3].indexOf(0));
+	test('Registers Get Wisdom command', async () => {
+		const extension = vscode.extensions.getExtension('TobyHarvey.force-cookies');
+		assert.ok(extension, 'Extension not found (publisher/name mismatch?)');
+
+		await extension.activate();
+
+		const commands = await vscode.commands.getCommands(true);
+		assert.ok(
+			commands.includes('force-cookies.helloWorld'),
+			'Expected command force-cookies.helloWorld to be registered'
+		);
 	});
 });
